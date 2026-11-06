@@ -32,6 +32,8 @@ Traccar_Automation/
 ├── .gitignore              # Arquivos e diretórios ignorados pelo Git
 ├── package.json            # Dependências do projeto e scripts de execução
 └── playwright.config.ts    # Configurações globais do Playwright Framework
+```
+---
 
 ⚡ Principais Funcionalidades Automatizadas
 
