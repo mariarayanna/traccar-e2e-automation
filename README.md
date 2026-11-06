@@ -67,27 +67,37 @@ Desafio: A API Web do Traccar opera na porta 8082, porém a ingestão de coorden
 
 Solução: O TraccarApiClient foi estruturado para enviar coordenadas simuladas diretamente na porta 5055 (http://localhost:5055/?id=...), garantindo a atualização instantânea da posição do veículo no mapa.
 
-# 🚀 Como Executar o Projeto
-- **- Pré-requisitos:**
+## 🚀 Como Executar o Projeto
 
-Node.js (v18 ou superior)
-Instância do Traccar rodando via Docker (localhost:8082)
+### Pré-requisitos
+- Node.js (v18 ou superior)
+- Instância do Traccar rodando via Docker (`localhost:8082`)
 
-- **1. Clonar o repositório**
+### 1. Clonar o repositório
+```bash
+git clone [https://github.com/mariarayanna/traccar-e2e-automation.git](https://github.com/mariarayanna/traccar-e2e-automation.git)
+cd traccar-e2e-automation
+```
 
-    git clone [https://github.com/mariarayanna/traccar-e2e-automation.git](https://github.com/mariarayanna/traccar-e2e-automation.git)
-    cd traccar-e2e-automation
+### 2. Instalar as dependências
+```bash
+npm install
+npx playwright install --with-deps
+```
 
-- **2. Instalar as dependências**
+### 3. Executar os testes
 
-    npm install
-    npx playwright install --with-deps
+**Execução em modo headless (linha de comando):**
+```bash
+npx playwright test
+```
 
-- **3. Executar os testes em modo headless:**
-    npx playwright test
+**Execução em modo interativo/visível (Headed):**
+```bash
+npx playwright test --headed
+```
 
- - **4. Execução em modo interativo/visível (Headed):**
-    npx playwright test --headed
-
-- **5. Visualizar o relatório de testes:**
-    npx playwright show-report
+**Visualizar o relatório de testes:**
+```bash
+npx playwright show-report
+```
